@@ -15,17 +15,29 @@
 
         #wrapper{width:700px; height:500px; background-color:white; border-style:solid; margin-top:20px; margin-left:auto; margin-right:auto; font-family:"Times New Roman" sans-serif;}
 
-        #header{height:100px; border-bottom:solid 3px silver;}
+        #header{height:90px; border-bottom:solid 3px black;}
 
         #main{height:300px; border-bottom:solid 3px silver; overflow:auto; padding-right:10px;}
 
-        #content{width:70%; float:right;}
+        #footer{height:90px; border-top:solid 3px black;}
 
-        #nav{width: 25%; height:100%; border-right:solid 3px silver;}
+        #header_content{width: 92%; margin: auto; margin-top: 25px;}
 
-        #footer{padding-top:5px; text-align:center; font-weight:bold; font-size:16px;}
+        #nav_logo{width: 20%; float: left;}
 
-        h1{text-align:center; font-family:'Monotype Corsiva'}
+        #nav_blank{width: 30%; float: left;}
+
+        #nav_hyperlink{width: 35%; float: left;}
+
+        #nav_social{width: 15%; float: left;}
+
+        #body_content{width:80%; margin: auto; margin-top: 15px; margin-bottom: 15px;}
+
+        #footer_content{width:80%; margin: auto; margin-top: 25px;}
+
+        #footer_social{width: 50%; float: left;}
+
+        #footer_content{width: 50%;}
 
     </style>
 
@@ -35,44 +47,37 @@
     <form id="form1" runat="server">
     <div id="wrapper">
         <div id="header">
-            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-                <h1 style="text-align:center; font-family:"Monotype Corsiva";">Media Mall</h1>
-                <div style="position: relative; left: 550px;">
-                    <asp:LoginView ID="LoginView1" runat="server">
-                        <AnonymousTemplate>
-                            <a runat="server" style="text-decoration: none; font-style:italic; color:black; font-weight:bold; font-size:18px;" href="~/Account/Register.aspx">Register</a> &nbsp;&nbsp;&nbsp; <a runat="server" style="text-decoration: none; font-style:italic; color:black; font-weight:bold; font-size:18px;" href="~/Account/Login.aspx">Log In</a>
-                        </AnonymousTemplate>
-                        <LoggedInTemplate>
-                            <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutpageURL="~/Default.aspx" OnLoggingOut="Unnamed_LoggingOut"/>
-                        </LoggedInTemplate>
-                    </asp:LoginView>
-                </div>
-            </asp:ContentPlaceHolder>
-        </div>
-        <div id="main">
-            <div id="content">
-                <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
-        
+            <div id="header_content">
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                    <div id="nav_logo">
+                        <img src="shorturl.at/zAP67" />
+                    </div>
+                    <div id="nav_blank">
+                    </div>
+                    <div id="nav_hyperlink">
+                        <h1>Test</h1>
+                    </div>
+                    <div id="nav_social">
+                        <h1>Test</h1>
+                    </div>
                 </asp:ContentPlaceHolder>
             </div>
-            <div id="nav">
-                <asp:ContentPlaceHolder id="ContentPlaceHolder3" runat="server">
-        
-                    <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1">
-                    </asp:TreeView>
-                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
-        
+        </div>
+        <div id="main">
+            <div id="body_content">
+                <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
         </div>
         <div id="footer">
-            <asp:ContentPlaceHolder id="ContentPlaceHolder4" runat="server">
-        
-                Media Mall<br />
-                123 Main Street.<br />
-                Glassboro, NJ 08028
-        
-            </asp:ContentPlaceHolder>
+            <div id="footer_content">
+                <asp:ContentPlaceHolder id="ContentPlaceHolder4" runat="server">
+                    <div id="footer_social">
+                    </div>
+                    <div id="footer_hyperlink">
+                    </div>
+                </asp:ContentPlaceHolder>
+            </div>
         </div>
     </div>
 

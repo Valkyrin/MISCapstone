@@ -1,0 +1,11 @@
+﻿body {
+}
+
+#contact_us {
+    border: 5px solid black;
+    margin-bottom: 20px;
+}
+
+#contact_message {
+    border: 5px solid black;
+}
