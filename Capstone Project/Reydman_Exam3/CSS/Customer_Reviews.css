@@ -1,0 +1,16 @@
+﻿body {
+}
+
+#reviews_featured {
+    border: 5px solid black;
+    margin-bottom: 20px;
+}
+
+#reviews_customer1 {
+    border: 5px solid black;
+    margin-bottom: 20px;
+}
+
+#reviews_customer2 {
+    border: 5px solid black;
+}

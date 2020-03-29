@@ -1,0 +1,213 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+    <style type="text/css">
+        body {
+            background-color: silver;
+        }
+
+        #wrapper {
+            width: 700px;
+            height: auto;
+            background-color: white;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: "Times New Roman" sans-serif;
+        }
+
+        #header {
+            height: 65px;
+            background-color: #333;
+        }
+
+        #main {
+            height: auto;
+            overflow: auto;
+            padding-right: 10px;
+        }
+
+        #footer {
+            height: 90px;
+            background-color: #333;
+        }
+
+        #header_content {
+            width: 92%;
+            margin: auto;
+            margin-top: 25px;
+        }
+
+        #nav_logo {
+            width: 20%;
+            float: left;
+        }
+
+        #nav_blank {
+            width: 25%;
+            float: left;
+        }
+
+        #nav_hyperlink {
+            width: auto;
+            float: right;
+        }
+
+        #nav_social {
+            width: 133px;
+        }
+
+        #body_content {
+            width: 80%;
+            margin: auto;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        #footer_content {
+            width: 100%;
+            margin: auto;
+            margin-top: 25px;
+        }
+
+        #footer_social {
+            width: 100%;
+            float: left;
+        }
+
+        #footer_content {
+            width: 100%;
+        }
+
+        #nav_hyperlink ul {
+            list-style-type: none;
+            margin: 0;
+            padding-top: 19px;
+            padding-right: 10px;
+            overflow: hidden;
+            background-color: #333;
+            width: 232px;
+            height: 30px;
+        }
+
+        #nav_hyperlink li {
+            float: left;
+        }
+
+            #nav_hyperlink li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 5px 5px;
+                text-decoration: none;
+            }
+
+                /* Change the link color to #111 (black) on hover */
+                #nav_hyperlink li a:hover {
+                    background-color: #111;
+                }
+
+
+
+       
+
+        /* Style inputs with type="text", select elements and textareas */
+        #contact_message input[type=text], select, textarea {
+            width: 100%; /* Full width */
+            padding: 12px; /* Some padding */
+            border: 1px solid #ccc; /* Gray border */
+            border-radius: 4px; /* Rounded borders */
+            box-sizing: border-box; /* Make sure that padding and width stays in place */
+            margin-top: 6px; /* Add a top margin */
+            margin-bottom: 16px; /* Bottom margin */
+            resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+        }
+
+        /* Style the submit button with a specific background color etc */
+        #contact_message input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+            /* When moving the mouse over the submit button, add a darker green color */
+            #contact_message input[type=submit]:hover {
+                background-color: #45a049;
+            }
+
+        /* Add a background color and some padding around the form */
+        #contact_message .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        #contact_message label {
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <div id="wrapper">
+            <div id="header">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <div id="nav_logo">
+                        <a href="Homepage.aspx">
+                            <img id="logo" src="Images/logo.png" style="width: 100%; height: 50%; padding-left: 15px; padding-top: 10px;">
+                        </a>
+                    </div>
+                    <div id="nav_blank">
+                    </div>
+                    <div id="nav_hyperlink">
+                        <ul>
+                            <li><a href="Homepage.aspx">Home</a></li>
+                            <li><a href="Products_Gallery.aspx">Gallery</a></li>
+                            <li><a href="Customer_Reviews.aspx">Reviews</a></li>
+                            <li><a href="Contact_Us.aspx">Contact</a></li>
+                        </ul>
+                    </div>
+                </asp:ContentPlaceHolder>
+            </div>
+            <div id="main">
+                <div id="body_content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div id="footer">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                    <div id="footer_social" style="text-align: center; padding-top: 12px;">
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                            <img id="twitter" src="Images/twitter.png" style="width: 6.9%; height: auto; padding-top: 10px;">
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                            <img id="facebook" src="Images/facebook.png" style="width: 3%; height: auto; padding-left: 15px; padding-top: 10px;">
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                            <img id="instagram" src="Images/instagram.png" style="width: 5.5%; height: auto; padding-left: 15px; padding-top: 10px;">
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                            <img id="youtube" src="Images/youtube.png" style="width: 7.4%; height: auto; padding-left: 15px; padding-top: 10px;">
+                        </a>
+                    </div>
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+
+    </form>
+</body>
+</html>
